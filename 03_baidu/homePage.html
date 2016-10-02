@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度一下，你就知道</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body onload="handleOnload()">
+	<div id="wrapper">
+		<div id="top-wrapper">
+			<ul id="top-links">
+				<li class="relative-link"><a href="">糯米</a></li>
+				<li class="relative-link"><a href="">新闻</a></li>
+				<li class="relative-link"><a href="">hao123</a></li>
+				<li class="relative-link"><a href="">地图</a></li>
+				<li class="relative-link"><a href="">视频</a></li>
+				<li class="relative-link"><a href="">贴吧</a></li>
+				<li class="user-signin"><a href="">登录</a></li>
+				<li class="user-signin"><a href="">设置</a></li>
+				<li class="more-products"><a href="">更多产品</a></li>
+			</ul>
+		</div>
+		<div id="right-wrapper" style="display: none;">
+			<div id="product-links">
+				<ul>
+					<li class="moretitle">更多产品</li>
+					<li><a href=""><span class="imgitem1"></span>音乐</a></li>
+					<li><a href=""><span class="imgitem2"></span>图片</a></li>
+					<li><a href=""><span class="imgitem3"></span>知道</a></li>
+					<li><a href=""><span class="imgitem4"></span>文库</a></li>
+					<li><a href=""><span class="imgitem5"></span>风云榜</a></li>
+					<li><a href="" class="allp">全部产品>></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="logo">
+			<img src="img\bd_logo1.png" width="270" height="129">
+		</div>
+		<div id="s-wrapper">
+			<form>
+				<span id="sw-search">
+				<span class="s-camera" style="display:block">
+					</span><input type="text" name="search-input"></span><button type='submit'>百度一下</button>
+				
+			</form>
+		</div>
+		<div id="middle-wrapper">
+			
+		</div>
+		<div id="bottom-wrapper">
+			<div id="copy-wrapper">
+				<div id="qrc-wrapper">
+					<div id="qrcitem1">
+						<div class="qrc-img" >
+						</div><div class="qrc-text">
+							<p><b>手机百度</b></p>
+							<p><span>快人一步</span></p>
+						</div>
+					</div><div id="qrcitem2">
+						<div class="qrc-img">
+						</div><div class="qrc-text">
+							<p><b>百度糯米</b></p>
+							<p><span>一元大餐</span></p>
+						</div>
+					</div><div id="copyright">
+					<p>
+						<a href="">把百度设为主页</a>
+						<a href="">关于百度</a>
+						<a href="">About Baidu</a>
+						<a href="">百度推广</a>
+					</p>
+					<p>&copy2016 Baidu <a href="">使用百度前必读</a> <a href="">意见反馈</a> 京ICP证030173号<i class="irclogo"></i></p>
+					<p><i class="jgwablogo"></i>京公网安备11000002000001号</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var sspan=document.getElementById('sw-search');
+		var sinput=document.getElementsByTagName('input');
+		var morepro=document.getElementsByClassName('more-products');
+		var rightw=document.getElementById('right-wrapper');
+
+		// Set the style of span and input when onfocusd.
+		sinput[0].onmousedown=function() {
+			sspan.className='cssOnmousedown';
+		}
+		sinput[0].onblur=function() {
+			sspan.className='cssOnblur';
+		}
+
+		function handleOnload() {
+			// After body onload, focus on the input element, and change the border color of span. 
+			sspan.className='cssOnmousedown';
+			sinput[0].focus();
+		}
+
+		//I don't know why the code below does not work.
+/*		morepro[0].onmouseover=show(rightw);
+		rightw.onmouseover=show(rightw);
+		rightw.onmouseout=hide(rightw);
+		function show(elem) {
+			elem.style="display:block;";
+		}
+		function hide(elem) {
+			elem.style="display:none;";
+		}*/
+
+		morepro[0].onmouseover=function showRightWrapper() {
+			rightw.style.display="block";
+		}
+		rightw.onmouseover=function showRightWrapper() {
+			rightw.style.display="block";
+		}
+		rightw.onmouseout=function(argument) {
+			rightw.style.display="none";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Google</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body onload="handleOnload()">
+	<div id="wrapper">
+		<div id="header">
+			<div id="gllinks">
+				<ul>
+					<li><a class="alink">Gmail</a>
+					</li><li><a class="alink">图片</a>
+					</li><li>
+						<div id="app_links">
+							<a href=""></a>
+						</div>
+					</li><li>
+							<button id="login" href="">登录</button> 
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="lwrapper">
+				<a href="https://www.google.com.hk/?gws_rd=cr#newwindow=1&safe=strict&q=Google&oi=ddle&hl=zh-CN">
+					<img src="img/googles-18th-birthday.gif">
+				</a>
+		</div>
+		<div id="swrapper">
+			<div id="sinput">
+				<div id="sdiv" class>
+					<input id='sinputbox' type="text" name="">
+					<a href=""><span id="saudio"></span></a>
+				</div>
+			</div>
+			<div id="sbutton">
+					<button>Google搜索
+					</button><button>手气不错</button>
+			</div>
+			<div id="slan">
+				<p>Google.com.hk 使用下列语言：<a href="">中文（繁體）</a><a href="">English</a></p>
+			</div>
+		</div>
+		<div id="footer">
+			<ul class="item item1">
+				<li><a href="">广告</a></li>
+				<li><a href="">商务</a></li>
+				<li><a href="">Google大全</a></li>
+			</ul>
+			<ul class="item item2">
+				<li><a href="">隐私权</a></li>
+				<li><a href="">条款</a></li>
+				<li><a href="">设置</a></li>
+				<li><a href="">使用Google.com</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var sinputbox=document.getElementById('sinputbox');
+	var sdiv=document.getElementById('sdiv');
+
+	sinputbox.onmousedown=function () {
+		sdiv.className='cssOnmousedown';
+	}
+	sinputbox.onblur=function () {
+		sdiv.className='cssOnblur';
+	}
+	function handleOnload() {
+		sdiv.className='cssOnmousedown';
+		sinputbox.focus();
+	}
+</script>
+</html>

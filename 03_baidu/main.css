@@ -1,0 +1,265 @@
+body{
+	font: 12px arial;
+	margin: 0px;
+}
+a{
+	color: black;
+}
+input{
+	outline: none;
+}
+html,body{
+	height: 100%;
+}
+ul{
+	list-style: none;
+	text-decoration: none;
+}
+#wrapper{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	min-width: 810px;
+	min-height: 600px;
+	position: relative;
+}
+#top-wrapper{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+#top-links{
+	float: right;
+	margin: 21px 0px 0px 5px;
+	font-size: 13px;
+}
+#top-links li{
+	display: inline-block;
+	margin-left: 20px;
+}
+
+#top-links li.relative-link{
+	font-weight: bold;
+}
+#top-links li.more-products{
+	background-color: #38f;
+	padding: 4px;
+	margin-right: 10px;
+}
+#top-links li.more-products a{
+	text-decoration: none;
+	color: white;
+}
+#right-wrapper{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	min-height: 1026px;
+	width: 85px;
+	background-color: #f9f9f9;
+}
+#product-links ul{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+#product-links ul li{
+	display: inherit;
+	text-align: center;
+}
+.moretitle{
+	width: 66px;
+    height: 43px;
+    padding-top:9px;
+    line-height: 43px;
+    margin: auto;
+}
+#product-links ul li a{
+	display: inherit;
+	height: 76px;
+	width: 66px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    overflow: hidden;
+}
+#product-links ul li a:hover{
+	text-decoration: underline;
+}
+#product-links ul li a.allp{
+	margin-top: 15px;
+	text-decoration: underline;
+}
+#product-links ul li span{
+	display: inherit;
+	height: 36px;
+	width: 36px;
+	background-image: url('img/bdbri_icons.png');
+	cursor: pointer;
+	margin: 10px auto 5px;
+}
+#product-links  .imgitem1{
+	background-position: -72px 0px;
+	width: 40px;
+}
+#product-links  .imgitem2{
+	background-position: -112px 0px;
+}
+#product-links  .imgitem3{
+	background-position: -36px 0px;
+}
+#product-links  .imgitem4{
+	background-position: -148px 0px;
+}
+#product-links  .imgitem5{
+	background-position: -184px 0px;
+}
+#logo{
+	display: block;
+	text-align: center;
+	margin-top: 45px;
+    padding: 0;
+}
+#s-wrapper{
+	text-align: center;
+	margin-top: 22px;
+}
+#s-wrapper form{
+	width: 641px;
+    height: 36px;
+    margin: auto;
+}
+#sw-search {
+	border: 1px solid #b6b6b6;
+    background-color: #ffffff;
+    height: 34px;
+    width:539px;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    text-align: left;
+}
+#sw-search.cssOnblur{
+	border: 1px solid #b6b6b6;
+}
+#sw-search:hover{
+	border:1px solid #8a8a8a;
+}
+#sw-search.cssOnmousedown{
+	border: 1px solid #03a9f4;
+}
+#sw-search .s-camera{
+	background-image: url("img/camera_new.png");
+	position: absolute;
+	right: 11px;
+	width: 18px;
+	height: 16px;
+	margin-top: -8px;
+    top: 50%;
+    cursor: pointer;
+}
+#sw-search .s-camera:hover{
+    background-position-y: 18px;
+}
+#sw-search  input{
+	border:0px;
+	position: relative;
+    width: 500px;
+    height: 22px;
+    margin: 6px 0px 0px 7px;
+    padding: 0px;
+}
+#s-wrapper button{
+	width: 100px;
+	height: 36px;
+	color: white;
+	border: 0px;
+	padding: 0px;
+	background: #3385ff;
+	border-bottom: 1px solid #2d78f4;
+	font-size: 15px;
+	letter-spacing: 1px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#s-wrapper button:hover{
+	background: #1e74f4;
+}
+#bottom-wrapper{
+	position: absolute;
+	bottom: 23px;
+	overflow: hidden;
+	text-align: center;
+	height: 100px;
+	width: 100%;
+	min-width: 800px;
+}
+#qrc-wrapper div{
+	display: inline-block;
+	vertical-align: top;
+}
+#qrcitem1 .qrc-img{
+	background-image: url("img/zbios.png");
+}
+#qrcitem2 .qrc-img{
+	background-image: url("img/nuomi.png");
+}
+#qrcitem2{
+	margin-left: 33px;
+}
+#qrc-wrapper .qrc-img{
+	height: 60px;
+	width: 60px;
+}
+#qrc-wrapper .qrc-text{
+	margin: 8px 0 0 10px;
+	line-height: 23px;
+}
+#qrc-wrapper .qrc-text p{
+	margin: 0px;
+}
+#qrc-wrapper .qrc-text span{
+	color: #999;
+}
+#qrc-wrapper .qrc-text b{
+	color: #666;
+}
+#copyright{
+	text-align: left;
+	margin-left: 33px;
+	line-height: 22px;
+}
+#copyright p{
+	margin: 0px;
+	padding: 0px;
+	display: block;
+    color: #999;
+}
+#copyright p:first-child a{
+	color: #999;
+	margin-left: 25px;
+}
+#copyright p>a:first-child{
+	margin-left: 0px;
+}
+#copyright p:nth-child(2)  a{
+	color: #999;
+}
+#copyright p i{
+	display: inline-block;
+	background-image: url("img/icons.png");
+	width: 14px;
+	height: 17px;
+	position: relative;
+	top:3px;
+}
+#copyright p i.irclogo{
+	background-position: -600px -96px;  
+}
+#copyright p i.jgwablogo{
+	background-position: -623px -96px;
+	margin-right: 6px;
+}
