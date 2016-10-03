@@ -14,13 +14,38 @@
 					</li><li><a class="alink">图片</a>
 					</li><li>
 						<div id="app_links">
-							<a href=""></a>
+							<span></span>
 						</div>
 					</li><li>
 							<button id="login" href="">登录</button> 
 					</li>
 				</ul>
 			</div>
+		</div>
+		<div id="moreApp">
+			<ul class="applist" style="display: none">
+					 <li><a href=""><span style="background-position: 0px -1449px;"></span><div>我的账户</div></a>
+				</li><li><a href=""><span style="background-position: 0px -276px;"></span><div>搜索</div></a>
+				</li><li><a href=""><span style="background-position: 0px -69px;"></span><div>地图</div></a>
+				</li><li><a href=""><span style="background-position: 0px -138px;"></span><div>YouTube</div></a>
+				</li><li><a href=""><span style="background-position: 0px -1380px;"></span><div>Play</div></a>
+				</li><li><a href=""><span style="background-position: 0px -1311px;"></span><div>新闻</div></a>
+				</li><li><a href=""><span style="background-position: 0px -621px;"></span><div>Gmail</div></a>
+				</li><li><a href=""><span style="background-position: 0px -1518px;"></span><div>云端硬盘</div></a>
+				</li><li><a href=""><span style="background-position: 0px -1794px;"></span><div>日历</div></a>
+				</li><li><a href=""><span style="background-position: 0px -897px"></span><div>Google+</div></a>
+				</li><li><a href=""><span style="background-position: 0px -1587px"></span><div>翻译</div></a>
+				</li><li><a href=""><span style="background-position: 0px -345px"></span><div>相册</div></a></li>
+			</ul>
+			<a class="moreitems" href="" style="display: none">更多</a>
+			<ul class="applist" style="display: none">
+					 <li><a href=""><span style="background-position: 0px -1725px;"></span><div>财经</div></a>
+				</li><li><a href=""><span style="background-position: 0px -552px;"></span><div>文档</div></a
+				</li><li><a href=""><span style="background-position: 0px -2001px;"></span><div>Blogger</div></a>
+				</li><li><a href=""><span style="background-position: 0px -483px;"></span><div>通讯录</div></a>
+				</li><li><a href=""><span style="background-position: 0px -759px;"></span><div>环聊</div></a></li>
+			</ul>
+			<a class="moreitems" href="" style="display: none">来自Google的更多应用</a>
 		</div>
 		<div id="lwrapper">
 				<a href="https://www.google.com.hk/?gws_rd=cr#newwindow=1&safe=strict&q=Google&oi=ddle&hl=zh-CN">
@@ -60,7 +85,12 @@
 <script type="text/javascript">
 	var sinputbox=document.getElementById('sinputbox');
 	var sdiv=document.getElementById('sdiv');
+	var appLink=document.getElementById("app_links");
+	var moreAppdiv=document.getElementById("moreApp");
+	var applist=document.getElementsByClassName("applist");
+	var moreitems=document.getElementsByClassName("moreitems");
 
+	//Handle the input css.
 	sinputbox.onmousedown=function () {
 		sdiv.className='cssOnmousedown';
 	}
@@ -71,5 +101,45 @@
 		sdiv.className='cssOnmousedown';
 		sinputbox.focus();
 	}
+
+	//Handle the drop down menu.
+	//点击按钮显示第一波
+	appLink.onmousedown=function (){
+		showElem(applist[0]);
+		showElem(moreitems[0]);
+	}
+	//点击更多，显示第二波
+	moreitems[0].onmousedown=function () {
+		hideElem(moreitems[0])
+		showElem(applist[1]);
+		showElem(moreitems[1]);
+	}
+	//向下滚动鼠标，显示第二波
+	//onmousewheel 是H5事件
+	moreAppdiv.onmousewheel=function () {
+		hideElem(moreitems[0])
+		showElem(applist[1]);
+		showElem(moreitems[1]);
+	}
+
+	//向上滚动鼠标，到顶，显示第一波
+
+
+	//点击别处，都走！
+
+
+/*	applist[0].onmousehover=function () {
+		hideElem(applist[0]);
+		hideElem(moreitems[0]);
+	}
+*/
+	function showElem(elem) {
+		elem.style.display="block";
+	}
+	function hideElem(elem) {
+		elem.style.display="none";
+	}
+
+	
 </script>
 </html>
