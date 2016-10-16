@@ -22,7 +22,7 @@
 				</ul>
 			</div>
 		</div>
-		<div id="moreApp">
+		<div id="moreApp" style="display: none;" tabindex="0">
 			<ul class="applist" style="display: none">
 					 <li><a href=""><span style="background-position: 0px -1449px;"></span><div>我的账户</div></a>
 				</li><li><a href=""><span style="background-position: 0px -276px;"></span><div>搜索</div></a>
@@ -40,7 +40,7 @@
 			<a class="moreitems" href="" style="display: none">更多</a>
 			<ul class="applist" style="display: none">
 					 <li><a href=""><span style="background-position: 0px -1725px;"></span><div>财经</div></a>
-				</li><li><a href=""><span style="background-position: 0px -552px;"></span><div>文档</div></a
+				</li><li><a href=""><span style="background-position: 0px -552px;"></span><div>文档</div></a>
 				</li><li><a href=""><span style="background-position: 0px -2001px;"></span><div>Blogger</div></a>
 				</li><li><a href=""><span style="background-position: 0px -483px;"></span><div>通讯录</div></a>
 				</li><li><a href=""><span style="background-position: 0px -759px;"></span><div>环聊</div></a></li>
@@ -89,6 +89,7 @@
 	var moreAppdiv=document.getElementById("moreApp");
 	var applist=document.getElementsByClassName("applist");
 	var moreitems=document.getElementsByClassName("moreitems");
+	var wrapper=document.getElementById('wrapper');
 
 	//Handle the input css.
 	sinputbox.onmousedown=function () {
@@ -102,9 +103,13 @@
 		sinputbox.focus();
 	}
 
+
+
 	//Handle the drop down menu.
 	//点击按钮显示第一波
-	appLink.onmousedown=function (){
+	appLink.onclick=function (){
+		event.stopPropagation();
+		showElem(moreAppdiv);
 		showElem(applist[0]);
 		showElem(moreitems[0]);
 	}
@@ -117,22 +122,26 @@
 	//向下滚动鼠标，显示第二波
 	//onmousewheel 是H5事件
 	moreAppdiv.onmousewheel=function () {
-		hideElem(moreitems[0])
-		showElem(applist[1]);
-		showElem(moreitems[1]);
+		//如果moreAppDiv在顶部
+		if (moreAppdiv.scrollTop==0) {
+			showElem(moreitems[0]);
+			hideElem(applist[1]);
+			hideElem(moreitems[1]);
+		}else{
+			hideElem(moreitems[0])
+			showElem(applist[1]);
+			showElem(moreitems[1]);
+		}
 	}
-
-	//向上滚动鼠标，到顶，显示第一波
-
-
 	//点击别处，都走！
-
-
-/*	applist[0].onmousehover=function () {
+	wrapper.onclick=function (){
+		hideElem(moreAppdiv);
 		hideElem(applist[0]);
 		hideElem(moreitems[0]);
+		hideElem(applist[1]);
+		hideElem(moreitems[1]);
 	}
-*/
+
 	function showElem(elem) {
 		elem.style.display="block";
 	}
