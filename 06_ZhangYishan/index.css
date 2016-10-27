@@ -1,0 +1,23 @@
+body{
+	padding-top: 50px;
+	font-family: arial,tahoma,'Microsoft Yahei','\5b8b\4f53',sans-serif;
+}
+#index-info{
+	background-color: #ebeae6;
+	background-image: url("img/ZhangYishan.jpg");
+	background-repeat: no-repeat;
+	background-position: right top;
+
+}
+.jumbotron{
+	padding: 0px;	
+}
+.jumbotron h1{
+	font-size: 42px;
+}
+.jumbotron p{
+	font-size: 14px;
+}
+#bref-intro{
+	padding:35px 0px 0px 30px;
+}
